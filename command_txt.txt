@@ -390,6 +390,21 @@ $ git commit -a -m "added navlist in master"
  2 files changed, 202 insertions(+)
  
 24. merge branch "feature1" in "master" (make some conflicts by changing same file on same line in both the branches)
+  Akansha@DESKTOP-VF677LJ MINGW64 ~/Desktop/git_exercise/new/exercise1 (master)
+$ git merge feature1
+Auto-merging index.html
+Auto-merging command_txt.txt
+CONFLICT (content): Merge conflict in command_txt.txt
+Automatic merge failed; fix conflicts and then commit the result.
+
+Akansha@DESKTOP-VF677LJ MINGW64 ~/Desktop/git_exercise/new/exercise1 (master|MERGING)
+$ git commit -a -m "merged commit"
+[master 5b88d3b] merged commit
+
+25. create branch "feature2" from master.
+Akansha@DESKTOP-VF677LJ MINGW64 ~/Desktop/git_exercise/new/exercise1 (master)
+$ git branch feature2
+
 
 
 
