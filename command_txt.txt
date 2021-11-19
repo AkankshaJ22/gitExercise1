@@ -376,6 +376,20 @@ $ git commit -a -m "this is feature1 branch "
  2 files changed, 190 insertions(+), 1 deletion(-)
 
 23. Make some commits on branch "master".
+Akansha@DESKTOP-VF677LJ MINGW64 ~/Desktop/git_exercise/new/exercise1 (feature1)
+$ git stash
+Saved working directory and index state WIP on feature1: d25029e this is feature1 branch
+
+Akansha@DESKTOP-VF677LJ MINGW64 ~/Desktop/git_exercise/new/exercise1 (feature1)
+$ git checkout master
+Switched to branch 'master'
+
+Akansha@DESKTOP-VF677LJ MINGW64 ~/Desktop/git_exercise/new/exercise1 (master)
+$ git commit -a -m "added navlist in master"
+[master 04a5169] added navlist in master
+ 2 files changed, 202 insertions(+)
+ 
+24. merge branch "feature1" in "master" (make some conflicts by changing same file on same line in both the branches)
 
 
 
