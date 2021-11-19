@@ -405,6 +405,37 @@ $ git commit -a -m "merged commit"
 Akansha@DESKTOP-VF677LJ MINGW64 ~/Desktop/git_exercise/new/exercise1 (master)
 $ git branch feature2
 
+26. Make some commits on "feature2".
+Akansha@DESKTOP-VF677LJ MINGW64 ~/Desktop/git_exercise/new/exercise1 (master)
+$ git branch
+  feature1
+  feature2
+* master
+
+Akansha@DESKTOP-VF677LJ MINGW64 ~/Desktop/git_exercise/new/exercise1 (master)
+$ git checkout feature2
+Switched to branch 'feature2'
+M       command_txt.txt
+
+Akansha@DESKTOP-VF677LJ MINGW64 ~/Desktop/git_exercise/new/exercise1 (feature2)
+$ git status
+On branch feature2
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   command_txt.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Akansha@DESKTOP-VF677LJ MINGW64 ~/Desktop/git_exercise/new/exercise1 (feature2)
+$ git commit -a -m "changed command file in feature branch"
+[feature2 2fc4d66] changed command file in feature branch
+ 1 file changed, 15 insertions(+)
+ 
+
+27.
+
+
 
 
 
