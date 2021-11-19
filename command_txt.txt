@@ -85,6 +85,101 @@ $ git commit -a -m "Added in the page title using headings "
 [master 773597d] Added in the page title using headings
  4 files changed, 45 insertions(+), 3 deletions(-)
 
+11. Again change the index file then check the code using git diff and then add in staging area and commit the code
+Akansha@DESKTOP-VF677LJ MINGW64 ~/Desktop/git_exercise/new/exercise1 (master)
+$ git diff
+diff --git a/command_txt.txt b/command_txt.txt
+index a10d0d0..6486914 100644
+--- a/command_txt.txt
++++ b/command_txt.txt
+@@ -79,6 +79,13 @@ index 6b0fb0e..ecc7b86 100644
+ +Akansha@DESKTOP-VF677LJ MINGW64 ~/Desktop/git_exercise/new/exercise1 (master)
+ +$ git add -A
+
++10. Again add in the staging area and as well as commit the code using single command
++Akansha@DESKTOP-VF677LJ MINGW64 ~/Desktop/git_exercise/new/exercise1 (master)
++$ git commit -a -m "Added in the page title using headings "
++[master 773597d] Added in the page title using headings
++ 4 files changed, 45 insertions(+), 3 deletions(-)
++
++
+
+
+
+diff --git a/index.html b/index.html
+index 7b05c52..c1905ee 100644
+--- a/index.html
++++ b/index.html
+
+Akansha@DESKTOP-VF677LJ MINGW64 ~/Desktop/git_exercise/new/exercise1 (master)
+$ git commit -a -m "this is third commit"
+[master c14b008] this is third commit
+ 2 files changed, 14 insertions(+)
+
+
+12. accidentally change the code then try to find git status 
+Akansha@DESKTOP-VF677LJ MINGW64 ~/Desktop/git_exercise/new/exercise1 (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   command_txt.txt
+        modified:   contact.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+13. revert those changes using git when those changes are not added to staging are 
+Akansha@DESKTOP-VF677LJ MINGW64 ~/Desktop/git_exercise/new/exercise1 (master)
+$ git checkout .
+Updated 2 paths from the index
+
+14. Again change the code and added in statging area
+Akansha@DESKTOP-VF677LJ MINGW64 ~/Desktop/git_exercise/new/exercise1 (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   command_txt.txt
+        modified:   contact.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Akansha@DESKTOP-VF677LJ MINGW64 ~/Desktop/git_exercise/new/exercise1 (master)
+$ git add -A
+
+15. Revert those changes after adding changes to staging area
+Akansha@DESKTOP-VF677LJ MINGW64 ~/Desktop/git_exercise/new/exercise1 (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   command_txt.txt
+        modified:   contact.html
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   command_txt.txt
+
+
+Akansha@DESKTOP-VF677LJ MINGW64 ~/Desktop/git_exercise/new/exercise1 (master)
+$ git reset HEAD
+Unstaged changes after reset:
+M       command_txt.txt
+M       contact.html
+
+Akansha@DESKTOP-VF677LJ MINGW64 ~/Desktop/git_exercise/new/exercise1 (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   command_txt.txt
+        modified:   contact.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
 
 
 
