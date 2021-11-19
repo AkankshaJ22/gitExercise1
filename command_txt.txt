@@ -79,6 +79,13 @@ index 6b0fb0e..ecc7b86 100644
 +Akansha@DESKTOP-VF677LJ MINGW64 ~/Desktop/git_exercise/new/exercise1 (master)
 +$ git add -A
 
+10. Again add in the staging area and as well as commit the code using single command
+Akansha@DESKTOP-VF677LJ MINGW64 ~/Desktop/git_exercise/new/exercise1 (master)
+$ git commit -a -m "Added in the page title using headings "
+[master 773597d] Added in the page title using headings
+ 4 files changed, 45 insertions(+), 3 deletions(-)
+
+
 
 
 
