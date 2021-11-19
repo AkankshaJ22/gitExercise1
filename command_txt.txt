@@ -40,5 +40,47 @@ Untracked files:
 nothing added to commit but untracked files present (use "git add" to track)
 
 7. Added in staging area
+Akansha@DESKTOP-VF677LJ MINGW64 ~/Desktop/git_exercise/new/exercise1 (master)
+$ git add -A
+
+8. Commit the code
+Akansha@DESKTOP-VF677LJ MINGW64 ~/Desktop/git_exercise/new/exercise1 (master)
+$ git commit -m "initial commit"
+[master (root-commit) 4782ce5] initial commit
+ 4 files changed, 80 insertions(+)
+ create mode 100644 about.html
+ create mode 100644 command_txt.txt
+ create mode 100644 contact.html
+ create mode 100644 index.html
+
+9. Again change the code and check the difference code using git f
+ Akansha@DESKTOP-VF677LJ MINGW64 ~/Desktop/git_exercise/new/exercise1 (master)
+$ git diff
+diff --git a/about.html b/about.html
+index 51aa68d..63c18d3 100644
+--- a/about.html
++++ b/about.html
+@@ -7,6 +7,6 @@
+     <title>About page</title>
+ </head>
+ <body>
+-
++    <div><h1>This is About page</h1></div>
+ </body>
+ </html>
+\ No newline at end of file
+diff --git a/command_txt.txt b/command_txt.txt
+index 6b0fb0e..ecc7b86 100644
+--- a/command_txt.txt
++++ b/command_txt.txt
+@@ -40,5 +40,19 @@ Untracked files:
+ nothing added to commit but untracked files present (use "git add" to track)
+7. Added in staging area
++Akansha@DESKTOP-VF677LJ MINGW64 ~/Desktop/git_exercise/new/exercise1 (master)
++$ git add -A
+
+
+
+
 
 
