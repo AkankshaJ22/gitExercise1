@@ -19,6 +19,7 @@ $ touch about.html
 Akansha@DESKTOP-VF677LJ MINGW64 ~/Desktop/git_exercise/new/exercise1 (master)
 $ touch contact.html
 
+
 5. Open Visual studio code
 Akansha@DESKTOP-VF677LJ MINGW64 ~/Desktop/git_exercise/new/exercise1 (master)
 $ code .
@@ -180,6 +181,180 @@ Changes not staged for commit:
         modified:   contact.html
 
 no changes added to commit (use "git add" and/or "git commit -a")
+
+
+16. Again changes in pages and added in staging arean and commit th code 
+Akansha@DESKTOP-VF677LJ MINGW64 ~/Desktop/git_exercise/new/exercise1 (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   about.html
+        modified:   command_txt.txt
+        modified:   contact.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Akansha@DESKTOP-VF677LJ MINGW64 ~/Desktop/git_exercise/new/exercise1 (master)
+$ git diff
+diff --git a/about.html b/about.html
+index 63c18d3..37c8d96 100644
+--- a/about.html
++++ b/about.html
+@@ -8,5 +8,208 @@
+ </head>
+ <body>
+     <div><h1>This is About page</h1></div>
++
++    <div>
++        <p>
++            our creative development agency is a
++dynamic, cross-functional team of
++designers and engineers
++Abhishek S.R.Software Engineer
++
++Achal A.Director
++
++Adhiraj G.Associate Product Owner
++
++Aditi K.Sr. Quality Analyst
++
++Aditi S.Software Engineer
+
+Akansha@DESKTOP-VF677LJ MINGW64 ~/Desktop/git_exercise/new/exercise1 (master)
+$
+
+Akansha@DESKTOP-VF677LJ MINGW64 ~/Desktop/git_exercise/new/exercise1 (master)
+$ git commit -a -m "Change in 3 files contact, command_txt.txt, and about page"
+[master 427cc36] Change in 3 files contact, command_txt.txt, and about page
+ 3 files changed, 314 insertions(+)
+
+Akansha@DESKTOP-VF677LJ MINGW64 ~/Desktop/git_exercise/new/exercise1 (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+
+17. Revert those changes after committing those changes .
+Akansha@DESKTOP-VF677LJ MINGW64 ~/Desktop/git_exercise/new/exercise1 (master)
+$ git log
+commit 7f012ecabe2975485849628000cf039d3af80d4d (HEAD -> master)
+Author: Akanksha <akanksha.jain@vinsol.com>
+Date:   Fri Nov 19 14:35:00 2021 +0530
+
+    changes in command file
+
+commit 427cc3637a728544247944ceec21e0fa8b1e2610
+Author: Akanksha <akanksha.jain@vinsol.com>
+Date:   Fri Nov 19 13:57:43 2021 +0530
+
+    Change in 3 files contact, command_txt.txt, and about page
+
+commit c14b008a60cedf4fa376ef4ed8e652307773d7c3
+Author: Akanksha <akanksha.jain@vinsol.com>
+Date:   Fri Nov 19 13:30:19 2021 +0530
+
+    this is third commit
+
+commit 773597d9b3ea0a84ce040400c767d6a3578c86ab
+Author: Akanksha <akanksha.jain@vinsol.com>
+Date:   Fri Nov 19 13:28:49 2021 +0530
+
+    Added in the page title using headings
+
+commit 4782ce55ec9816ee145089d0280d3c2a8031a2e9
+Author: Akanksha <akanksha.jain@vinsol.com>
+Date:   Fri Nov 19 13:21:08 2021 +0530
+
+    initial commit
+
+Akansha@DESKTOP-VF677LJ MINGW64 ~/Desktop/git_exercise/new/exercise1 (master)
+$ git reset HEAD~
+Unstaged changes after reset:
+M       command_txt.txt
+
+
+18. Display all the commits 
+Akansha@DESKTOP-VF677LJ MINGW64 ~/Desktop/git_exercise/new/exercise1 (master)
+$ git log
+commit 427cc3637a728544247944ceec21e0fa8b1e2610 (HEAD -> master)
+Author: Akanksha <akanksha.jain@vinsol.com>
+Date:   Fri Nov 19 13:57:43 2021 +0530
+
+    Change in 3 files contact, command_txt.txt, and about page
+
+commit c14b008a60cedf4fa376ef4ed8e652307773d7c3
+Author: Akanksha <akanksha.jain@vinsol.com>
+Date:   Fri Nov 19 13:30:19 2021 +0530
+
+    this is third commit
+
+commit 773597d9b3ea0a84ce040400c767d6a3578c86ab
+Author: Akanksha <akanksha.jain@vinsol.com>
+Date:   Fri Nov 19 13:28:49 2021 +0530
+
+    Added in the page title using headings
+
+commit 4782ce55ec9816ee145089d0280d3c2a8031a2e9
+Author: Akanksha <akanksha.jain@vinsol.com>
+Date:   Fri Nov 19 13:21:08 2021 +0530
+
+    initial commit
+
+
+19. Display a specific commit 
+$ git log -p -2
+commit 427cc3637a728544247944ceec21e0fa8b1e2610 (HEAD -> master)
+Author: Akanksha <akanksha.jain@vinsol.com>
+Date:   Fri Nov 19 13:57:43 2021 +0530
+
+    Change in 3 files contact, command_txt.txt, and about page
+
+diff --git a/about.html b/about.html
+index 63c18d3..37c8d96 100644
+--- a/about.html
++++ b/about.html
+@@ -8,5 +8,208 @@
+ </head>
+ <body>
+     <div><h1>This is About page</h1></div>
++
++    <div>
++        <p>
++            our creative development agency is a
++dynamic, cross-functional team of
++designers and engineers
++Abhishek S.R.Software Engineer
++
++Achal A.Director
+
+
+20. create branches called "feature1" and "feature2" from master.
+Akansha@DESKTOP-VF677LJ MINGW64 ~/Desktop/git_exercise/new/exercise1 (master)
+$ git branch feature1
+
+Akansha@DESKTOP-VF677LJ MINGW64 ~/Desktop/git_exercise/new/exercise1 (master)
+$ git branch
+  feature1
+* master
+
+Akansha@DESKTOP-VF677LJ MINGW64 ~/Desktop/git_exercise/new/exercise1 (master)
+$ git branch feature2
+
+Akansha@DESKTOP-VF677LJ MINGW64 ~/Desktop/git_exercise/new/exercise1 (master)
+$ git branch
+  feature1
+  feature2
+* master
+
+21. Delete branch "feature2".
+Akansha@DESKTOP-VF677LJ MINGW64 ~/Desktop/git_exercise/new/exercise1 (master)
+$ git branch -d feature2
+Deleted branch feature2 (was 427cc36).
+
+22. Make some commits on "feature1"
+
 
 
 
